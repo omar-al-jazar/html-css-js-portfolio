@@ -1,0 +1,222 @@
+/* ========== Base ========== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Poppins",sans-serif;
+  color:#fff;
+  background:linear-gradient(135deg,#1e1e2f,#2b2b3d);
+  min-height:100vh;
+}
+
+/* ========== Navbar ========== */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 2rem;z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.2)
+}
+.logo{font-size:1.6rem;font-weight:600;letter-spacing:1px}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul li a{color:#fff;text-decoration:none;font-weight:500;transition:.3s}
+nav ul li a:hover{color:#00c3ff}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.bar{width:25px;height:3px;background:#fff;border-radius:10px}
+
+/* ========== Hero ========== */
+.hero{
+  height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center
+}
+.hero h2{font-size:2.6rem;margin-bottom:1rem}
+.hero p{font-size:1.05rem;color:#cfcfd6}
+
+/* ========== Profile ========== */
+.profile{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at top left,#24243e,#302b63,#0f0c29);
+  padding:2rem
+}
+.glass-card{width:320px;padding:2.5rem;text-align:center;border-radius:20px}
+.profile-img{
+  width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;
+  border:2px solid rgba(255,255,255,.35)
+}
+.glass-card h2{font-size:1.6rem;margin-bottom:.4rem}
+.glass-card h4{font-weight:400;color:#00c3ff;margin-bottom:.8rem}
+.glass-card p{font-size:.95rem;color:#ddd;margin-bottom:1.1rem}
+.btn-row{display:flex;gap:.8rem;justify-content:center;margin-bottom:1rem;flex-wrap:wrap}
+.btn-glass{
+  display:inline-block;padding:.6rem 1rem;border-radius:10px;color:#fff;
+  text-decoration:none;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);transition:.3s
+}
+.btn-glass:hover{background:rgba(0,195,255,.3);box-shadow:0 0 20px rgba(0,195,255,.3)}
+.btn-glass.disabled{opacity:.5;pointer-events:none}
+.social-links{display:flex;justify-content:center;gap:1.1rem}
+.social-links a{color:#fff;font-size:1.25rem;transition:.3s}
+.social-links a:hover{color:#00c3ff}
+
+/* ========== About ========== */
+.about{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#1e1e2f,#2b2b3d);padding:4rem 2rem
+}
+.about-glass{
+  max-width:1000px;width:100%;display:flex;align-items:center;
+  justify-content:space-between;gap:3rem;border-radius:24px;
+  padding:3rem;position:relative;overflow:hidden
+}
+.about-text{flex:1}
+.about-text h2{font-size:2rem;margin-bottom:1.2rem}
+.about-text p{font-size:1rem;line-height:1.7;color:#ddd;margin-bottom:1rem}
+.about-image{flex:1;display:flex;justify-content:center}
+.about-image img{
+  width:100%;max-width:380px;border-radius:20px;
+  border:2px solid rgba(255,255,255,.22);
+  box-shadow:0 0 25px rgba(255,255,255,.1)
+}
+
+/* ========== Experience ========== */
+.experience{
+  min-height:100vh;padding:5rem 2rem;
+  background:radial-gradient(circle at bottom right,#1c1c2b,#272742,#0f0c29);
+  display:flex;flex-direction:column;align-items:center
+}
+.section-title{font-size:2rem;margin-bottom:3rem;text-align:center}
+.exp-container{max-width:1100px;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem}
+.exp-card{flex:1 1 300px;padding:2rem;border-radius:20px;position:relative;overflow:hidden}
+.exp-card h3{font-size:1.25rem;margin-bottom:.5rem}
+.exp-card h4{font-weight:400;color:#00c3ff;margin-bottom:.8rem}
+.exp-card p{color:#ddd;line-height:1.6;font-size:.95rem;margin-bottom:1.6rem}
+.exp-date{position:absolute;bottom:1rem;right:1.5rem;font-size:.8rem;color:#bbb}
+
+/* ========== Projects ========== */
+.projects{
+  min-height:100vh;padding:5rem 2rem;
+  background:linear-gradient(135deg,#191926,#23233a,#0f0c29);
+  display:flex;flex-direction:column;align-items:center
+}
+.projects-grid{
+  width:100%;max-width:1100px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem
+}
+.project-card{border-radius:20px;overflow:hidden;position:relative}
+.project-card img{
+  width:100%;height:200px;object-fit:cover;
+  border-bottom:1px solid rgba(255,255,255,.15)
+}
+.project-info{padding:1.5rem}
+.project-info h3{font-size:1.2rem;margin-bottom:.7rem;color:#00c3ff}
+.project-info p{color:#ddd;font-size:.95rem;margin-bottom:1.1rem;line-height:1.6}
+.project-card:hover{transform:translateY(-8px) scale(1.02);transition:.4s}
+
+/* ========== Contact (Improved Layout) ========== */
+.contact{
+  min-height:60vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  background:radial-gradient(circle at top right,#1a1a28,#252542,#0f0c29);
+  padding:5rem 2rem;
+}
+.contact h2{
+  font-size:clamp(1.6rem,1.2rem + 1vw,2.2rem);
+  margin-bottom:1.25rem;letter-spacing:.5px;
+}
+.contact-links{
+  width:100%;max-width:760px;
+  margin:0.25rem auto 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:14px 18px;
+  align-items:center;justify-items:center;
+}
+.contact-links a{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:.7rem 1rem;border-radius:12px;
+  text-decoration:none;color:#fff;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.20);
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+}
+.contact-links a i{line-height:0;font-size:1.05rem}
+.contact-links a:hover{
+  transform:translateY(-2px);
+  background:rgba(0,195,255,.22);
+  box-shadow:0 6px 18px rgba(0,195,255,.25);
+}
+.contact .copyright{
+  margin-top:1.25rem;opacity:.85;font-size:.92rem;
+}
+@media (min-width:1024px){
+  .contact-links{
+    grid-template-columns:repeat(3,max-content);
+    gap:18px 28px;
+  }
+}
+
+/* ========== Footer ========== */
+.footer{
+  display:flex;align-items:center;justify-content:center;
+  padding:1rem 2rem;text-align:center
+}
+
+/* ========== Responsive ========== */
+@media (max-width:768px){
+  nav ul{
+    position:absolute;top:70px;right:0;
+    background:rgba(255,255,255,.12);
+    -webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);
+    flex-direction:column;width:220px;padding:1.2rem;border-radius:12px 0 0 12px;
+    transform:translateX(120%);transition:transform .3s
+  }
+  nav ul.active{transform:translateX(0)}
+  .menu-toggle{display:flex}
+  .about-glass{flex-direction:column;text-align:center}
+  .about-image img{max-width:280px}
+  .exp-container{flex-direction:column;align-items:center}
+  .exp-card{width:92%}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-form{grid-template-columns:1fr}
+}
+
+/* ========== Apple-style Glass Effect ========== */
+:root{
+  --glass-bg:rgba(255,255,255,.10);
+  --glass-border:rgba(255,255,255,.22);
+  --glass-cyan:rgba(0,195,255,.25);
+  --glass-blur:18px;
+}
+.apple-glass{
+  position:relative;background:var(--glass-bg);
+  border:1px solid var(--glass-border);border-radius:20px;
+  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(160%);
+  backdrop-filter:blur(var(--glass-blur)) saturate(160%);
+  overflow:hidden;will-change:transform,filter,opacity;
+  transition:transform .4s,box-shadow .4s,background .4s;
+  box-shadow:0 0 30px rgba(255,255,255,.06)
+}
+.apple-glass::before{
+  content:"";position:absolute;inset:-60%;
+  background:conic-gradient(from 180deg,rgba(255,255,255,.18),rgba(255,255,255,.04) 40%,rgba(255,255,255,.18) 80%,rgba(255,255,255,0) 100%);
+  filter:blur(60px);mix-blend-mode:overlay;animation:glass-rotate 12s linear infinite;
+  opacity:.55;pointer-events:none
+}
+.apple-glass::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(180px 180px at var(--mx,50%) var(--my,30%),rgba(255,255,255,.20),transparent 60%),
+    radial-gradient(420px 420px at var(--mx,50%) var(--my,30%),var(--glass-cyan),transparent 70%);
+  mix-blend-mode:screen;opacity:.35;transition:opacity .25s ease;pointer-events:none
+}
+.apple-glass:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 40px rgba(0,195,255,.25),0 0 60px rgba(255,255,255,.08)
+}
+@keyframes glass-rotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){
+  .apple-glass::before{animation:none}
+  .apple-glass,.apple-glass:hover{transition:none;transform:none}
+}
+.navbar.apple-glass{border-radius:0;outline:none;border-bottom:1px solid var(--glass-border)}
